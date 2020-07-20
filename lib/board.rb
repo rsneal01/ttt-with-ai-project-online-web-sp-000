@@ -26,6 +26,7 @@ class Board
   
   def full?
     if cells.none? == " " && cells.none? == ""
+      true
     end
   end
   
