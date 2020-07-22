@@ -1,3 +1,4 @@
+require 'pry'
 class Board
   
   attr_accessor :cells
@@ -25,9 +26,37 @@ class Board
   end
   
   def full?
-    if cells.none? == " " && cells.none? == ""
+    cells.all? do |player_token|
+      player_token == "X" || player_token == "O"
+    end
+  end
+  
+  def turn_count
+    self.cells.count do |cell|
+      cell == "X" || cell == "O"
+    end
+  end
+  
+  def taken?(position)
+    if self.cells[position.to_i - 1] == "X" || self.cells[position.to_i - 1] == "O"
+      true
+    else
+      false
+    end
+  end
+  
+  def valid_move?(position)
+    if !position.to_i.between?(1,9)
+      false
+    elsif !taken?(position)
       true
     end
+  end
+  
+  def update(position, player)
+    # binding.pry
+    self.cells[position.to_i - 1] = "#{player.token}"
+    
   end
   
 end
