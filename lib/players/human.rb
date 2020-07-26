@@ -1,9 +1,9 @@
 module Players
   class Human < Player
     
-    def move(position)
-      position = gets
-      position
+    def move(board)
+      user_input = gets
+      user_input
     end
     
   end
