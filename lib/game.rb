@@ -67,9 +67,9 @@ class Game
     player = current_player
     current_move = player.move(board)
     if !board.valid_move?(current_move)
-      binding.pry
       turn
     else
+      binding.pry
       board.update(current_move, player)
       board.display
     end
