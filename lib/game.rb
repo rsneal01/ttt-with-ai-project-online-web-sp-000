@@ -76,7 +76,6 @@ class Game
   end
   
   def play 
-    binding.pry
     until over? do
       turn
     end
