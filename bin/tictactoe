@@ -7,3 +7,4 @@ require_relative '../config/environment'
     puts "Which player will go first?"
     input = gets
     new_game = Game.new(input)
+    play
