@@ -7,7 +7,6 @@ require_relative '../config/environment'
     puts "Which player will go first?"
     input = gets
     if input.to_i == 0
-    binding.pry
       new_game = Game.new(player_1 = Players::Computer.new("X"), player_2 = Players::Computer.new("O"), board = Board.new)
       new_game.play
       end
