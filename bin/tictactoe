@@ -2,4 +2,8 @@
 
 require_relative '../config/environment'
 
-start
+    puts "welcome to Tic Tac Toe"
+    puts "How many players, 0, 1, or 2?"
+    puts "Which player will go first?"
+    input = gets
+    new_game = Game.new(input)
