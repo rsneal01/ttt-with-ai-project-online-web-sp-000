@@ -1,3 +1,4 @@
+require 'pry'
 class Game
   
   attr_accessor :board, :player_1, :player_2
@@ -28,8 +29,6 @@ class Game
       player_2
     end
   end
-  
-    
   
  def won?
     WIN_COMBINATIONS.detect do |win_combination|
