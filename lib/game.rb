@@ -30,8 +30,6 @@ class Game
     end
   end
   
-    
-  
  def won?
     WIN_COMBINATIONS.detect do |win_combination|
       board.cells[win_combination[0]] == board.cells[win_combination[1]] && 
@@ -78,6 +76,7 @@ class Game
   end
   
   def play 
+    binding.pry
     until over? do
       turn
     end
