@@ -1,3 +1,4 @@
+require 'pry'
 class Game
   
   attr_accessor :board, :player_1, :player_2
@@ -66,6 +67,7 @@ class Game
   
   def turn
     player = current_player
+    binding.pry
     current_move = player.move(board)
     if !board.valid_move?(current_move)
       turn
