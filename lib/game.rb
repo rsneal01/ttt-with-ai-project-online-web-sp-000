@@ -86,4 +86,12 @@ class Game
     end
   end
   
+  def start 
+    puts "welcome to Tic Tac Toe"
+    puts "How many players, 0, 1, or 2?"
+    puts "Which player will go first?"
+    input = gets
+    new_game = self.new(input)
+  end
+  
 end
